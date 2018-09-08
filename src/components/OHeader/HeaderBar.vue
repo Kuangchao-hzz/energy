@@ -27,7 +27,9 @@
 </template>
 
 <script>
+  import { Dropdown, DropdownItem, DropdownMenu } from 'iview';
   export default {
+    components: { Dropdown, DropdownItem, DropdownMenu },
     name: "header-bar",
     data() {
       return {
@@ -62,6 +64,7 @@
 </script>
 
 <style lang="scss" scoped>
+  @import "../../assets/css/theme.scss";
   .header-bar-container{
     .header-bar{
       box-shadow: 0 0 10px rgba(0,0,0,0.3);
@@ -93,7 +96,7 @@
                 position: absolute;
                 left: 0;
                 bottom: 0;
-                background: #5CB39D;
+                background: $btnBg;
               }
             }
           }
@@ -132,7 +135,7 @@
               padding: 5px 10px;
               border-radius: 4px;
               color: #fff;
-              background: #5DB39E;
+              background: $btnBg;
               outline: none;
               border: none;
               margin-left: 15px;

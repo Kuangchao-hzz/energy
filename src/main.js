@@ -16,7 +16,7 @@ Vue.config.productionTip = false;
 Vue.use(VueI18n);
 Vue.use(Common);
 const i18n = new VueI18n({
-  locale: 'en', // set locale
+  locale: 'zh', // set locale
   messages, // set locale messages
 });
 

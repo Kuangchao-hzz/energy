@@ -1,6 +1,29 @@
 # web-energy
 
-> A Vue.js project
+> node v8.11.3
+
+> npm 5.6.0
+
+### 项目目录
+
+```$xslt
+├── src 源代码
+  ├── api 接口请求
+    ├── index.js axios 配置实例
+    ├── register.js 登录接口文件
+    ...
+  ├── common 公共组件(注册为全局组件)
+    ├── Icon 全局图标组件
+    ...
+  ├── commponents 布局组件
+  ├── i18n 国际化
+    ├── en.js 英文语言包
+  ├── views 项目页面文件
+    ...
+  ├── vuex 状态机
+    ├── regeister 登录状态模块
+
+```
 
 ## Build Setup
 

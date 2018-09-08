@@ -16,7 +16,7 @@
             <span>手机APP</span>
             <icon type="icon-down" size="1"></icon>
           </li>
-          <li class="lang"><span>中文</span>[切换]</li>
+          <li class="lang" @click="onChangeLang"><span>{{ $t('lang') }}</span>[切换]</li>
         </ul>
       </div>
       <header-bar></header-bar>
@@ -28,6 +28,21 @@
   export default {
     components: { HeaderBar },
     name: "header-container",
+    data() {
+      return{
+        hasZh: true
+      }
+    },
+    methods: {
+      onChangeLang() {
+        this.hasZh = !this.hasZh;
+        if(this.hasZh) {
+          this.$i18n.locale = 'zh'
+        } else {
+          this.$i18n.locale = 'en'
+        }
+      }
+    }
   }
 </script>
 
@@ -61,6 +76,11 @@
         >li{
           padding-left: 10px;
           cursor: pointer;
+          &.lang{
+            >span{
+              color: $btnBg;
+            }
+          }
           .icon{
             font-weight: 600;
           }
